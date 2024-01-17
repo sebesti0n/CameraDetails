@@ -5,7 +5,7 @@ const app = express()
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
-app.post('/',async (req,res)=>{
+app.post('/predict',async (req,res)=>{
     // console.log(req.body);
     const s1 = await new student(req.body);
     s1.save().then(()=>{
