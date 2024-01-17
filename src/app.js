@@ -2,9 +2,14 @@ const express = require('express')
 const db=require("./connectionSetup/mongoDBSetup.js");
 const student = require("./models/studentSchma.js")
 const app = express()
+const cors = require('cors')
+const bodyParser = require('body-parser');
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
+app.use(bodyParser.json());
+app.use(cors());
+app.use(bodyParser.urlencoded({extended:true}));
 app.post('/predict',async (req,res)=>{
     // console.log(req.body);
     const s1 = await new student(req.body);
