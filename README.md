@@ -1,3 +1,3 @@
-# Student-Backend
-Student Details using expressJs and MongoDB.
+# CCTVDetails-Backend
+CCTV Details using expressJs and MongoDB.
 Setup REST API
